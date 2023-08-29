@@ -27,6 +27,7 @@ rec <- records %>%
 # Create a gtsummary table of descriptive statistics about the data
 tbl_summary(
   rec,
+  by = shortcut,
   label = list(
     `track` ~ "Track name",
     `type` ~ "Three lap record",
