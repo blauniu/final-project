@@ -38,3 +38,15 @@ tbl_summary(
     `record_duration` ~ "Record duration in days"
   )
 )
+
+# Fit a regression model to predict the time from the track and player
+track_model <- lm(time ~ track + player,
+            data = rec)
+tbl_regression(
+  track_model,
+  intercept = TRUE,
+  label = list(
+    track ~ "Track name",
+    player ~ "Player's name"
+  )
+)
