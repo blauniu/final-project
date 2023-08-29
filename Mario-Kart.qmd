@@ -1,0 +1,48 @@
+---
+title: "Mario-Kart"
+author: "Blake Launius"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+```{r}
+#| label: tbl-one
+#| tbl-cap: "Mario Kart World Records"
+#| output-location: slide
+table1 <- tbl_summary(
+  rec,
+  by = shortcut,
+  label = list(
+    `track` ~ "Track name",
+    `type` ~ "Three lap record",
+    `shortcut` ~ "Shortcut or non-shortcut record",
+    `player` ~ "Player's name",
+    `system_played` ~ "Used system",
+    `date` ~ "World record date",
+    `time` ~ "Time in seconds",
+    `record_duration` ~ "Record duration in days"
+  )
+)
+table1
+```
