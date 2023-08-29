@@ -62,3 +62,9 @@ tbl_regression(
   )
 )
 ```
+
+```{r}
+#| label: fig-one
+#| fig-cap: "Time vs Track"
+ggplot(rec, aes(track, time)) + geom_point()
+```
