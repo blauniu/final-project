@@ -47,6 +47,8 @@ table1 <- tbl_summary(
 table1
 ```
 
+The median time of World Record holders that used a shortcut was (`r inline_text(table1, variable = "time", column = "Yes")`)
+
 ```{r}
 #| tbl-two
 #| tbl-cap: "Predicting time from track and player
@@ -68,3 +70,11 @@ tbl_regression(
 #| fig-cap: "Time vs Track"
 ggplot(rec, aes(track, time)) + geom_point()
 ```
+
+```{r}
+#Mean time of record holders
+stats <- list(n = nrow(rec),
+              mean_time = mean(rec$time))
+```
+
+There were `r stats$n` record holders with a mean race time of `r stats$mean_time`
