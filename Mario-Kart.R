@@ -10,3 +10,10 @@ tuesdata <- tidytuesdayR::tt_load(2021, week = 22)
 here::here("tuesdata")
 
 records <- tuesdata$records
+
+# Load the packages
+library(gtsummary)
+library(broom)
+library(here)
+library(renv)
+library(tidyverse)
