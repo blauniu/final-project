@@ -23,3 +23,18 @@ library(tidyverse)
 rec <- records %>%
   select(track, type, shortcut, player, system_played, date, time, record_duration) %>%
   filter(type == "Three Lap", system_played == "NTSC")
+
+# Create a gtsummary table of descriptive statistics about the data
+tbl_summary(
+  rec,
+  label = list(
+    `track` ~ "Track name",
+    `type` ~ "Three lap record",
+    `shortcut` ~ "Shortcut or non-shortcut record",
+    `player` ~ "Player's name",
+    `system_played` ~ "Used system",
+    `date` ~ "World record date",
+    `time` ~ "Time in seconds",
+    `record_duration` ~ "Record duration in days"
+  )
+)
