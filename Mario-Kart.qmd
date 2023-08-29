@@ -46,3 +46,19 @@ table1 <- tbl_summary(
 )
 table1
 ```
+
+```{r}
+#| tbl-two
+#| tbl-cap: "Predicting time from track and player
+#| output-location: slide
+lm(time ~ track + player,
+            data = rec)
+tbl_regression(
+  track_model,
+  intercept = TRUE,
+  label = list(
+    track ~ "Track name",
+    player ~ "Player's name"
+  )
+)
+```
