@@ -50,3 +50,6 @@ tbl_regression(
     player ~ "Player's name"
   )
 )
+
+# Create a figure of the time vs. track
+ggplot(rec, aes(track, time)) + geom_point()
