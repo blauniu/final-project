@@ -82,3 +82,5 @@ stats <- list(n = nrow(rec),
 ```
 
 There were `r stats$n` record holders with a mean race time of `r stats$mean_time`
+
+This data contains world records for Mario Kart 64 and comes from the Mario Kart World Records website (https://mkwrs.com/)
