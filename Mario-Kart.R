@@ -53,3 +53,11 @@ tbl_regression(
 
 # Create a figure of the time vs. track
 ggplot(rec, aes(track, time)) + geom_point()
+
+# Write a function to calculate the standard deviation of a variable
+my_function <- function(df, variable) {
+  return(sd(df[[variable]]))
+}
+
+# Calculate the standard deviation of the time variable
+sd_time <- my_function(rec, "time")
