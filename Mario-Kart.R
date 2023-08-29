@@ -7,3 +7,6 @@
 # Either ISO-8601 date or year/week works!
 
 tuesdata <- tidytuesdayR::tt_load(2021, week = 22)
+here::here("tuesdata")
+
+records <- tuesdata$records
