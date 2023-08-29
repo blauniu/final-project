@@ -17,3 +17,9 @@ library(broom)
 library(here)
 library(renv)
 library(tidyverse)
+
+
+#limiting the number of observations
+rec <- records %>%
+  select(track, type, shortcut, player, system_played, date, time, record_duration) %>%
+  filter(type == "Three Lap", system_played == "NTSC")
