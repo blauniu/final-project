@@ -53,10 +53,8 @@ The median time of World Record holders that used a shortcut was (`r inline_text
 
 ```{r}
 #| tbl-two
-#| tbl-cap: "Predicting time from track and player
+#| tbl-cap: "Predicting time from track and player"
 #| output-location: slide
-lm(time ~ track + player,
-            data = rec)
 tbl_regression(
   track_model,
   intercept = TRUE,
