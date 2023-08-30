@@ -62,3 +62,10 @@ my_function <- function(df, variable) {
 
 # Calculate the standard deviation of the time variable
 sd_time <- my_function(rec, "time")
+
+# Create a quarto document and render it
+rmarkdown::render("Mario-Kart.qmd")
+
+renv::init()
+renv::status()
+renv::snapshot()
