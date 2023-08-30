@@ -26,7 +26,7 @@ table1 <- tbl_summary(
 table1
 ```
 
-@tbl-one shows a table of record holders by shortcut or not
+`@tbl-one` shows a table of record holders by shortcut or not
 
 The median time of World Record holders that used a shortcut was (`r inline_text(table1, variable = "time", column = "Yes")`)
 
@@ -50,7 +50,7 @@ tbl_regression(
 ggplot(rec, aes(track, time)) + geom_point()
 ```
 
-@fig-one shows a figure of time vs track
+`@fig-one` shows a figure of time vs track
 
 ```{r}
 #Mean time of record holders
